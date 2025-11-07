@@ -1,0 +1,327 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error occurred",
+    "success": "Success",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "search": "Search",
+    "filter": "Filter",
+    "export": "Export",
+    "import": "Import",
+    "refresh": "Refresh",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK",
+    "close": "Close",
+    "view": "View",
+    "download": "Download",
+    "upload": "Upload",
+    "copy": "Copy",
+    "paste": "Paste",
+    "cut": "Cut",
+    "select_all": "Select All",
+    "clear": "Clear",
+    "reset": "Reset",
+    "settings": "Settings",
+    "profile": "Profile",
+    "logout": "Logout",
+    "login": "Login",
+    "register": "Register",
+    "ai_powered": "AI Powered",
+    "beta": "Beta",
+    "new": "New",
+    "updated": "Updated",
+    "draft": "Draft",
+    "published": "Published",
+    "archived": "Archived"
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "departments": "Departments",
+    "tasks": "Tasks",
+    "reports": "Reports",
+    "analytics": "Analytics",
+    "settings": "Settings",
+    "help": "Help",
+    "notifications": "Notifications",
+    "profile": "Profile"
+  },
+  "dashboard": {
+    "title": "Main Dashboard",
+    "welcome_message": "Welcome to YYO Agent AI Smart Management System",
+    "greeting": {
+      "morning": "Good Morning",
+      "afternoon": "Good Afternoon",
+      "evening": "Good Evening"
+    },
+    "stats": {
+      "total_tasks": "Total Tasks",
+      "completed_tasks": "Completed Tasks",
+      "pending_tasks": "Pending Tasks",
+      "overdue_tasks": "Overdue Tasks",
+      "active_projects": "Active Projects",
+      "total_employees": "Total Employees",
+      "departments": "Departments",
+      "ai_requests": "AI Requests"
+    },
+    "quick_actions": {
+      "title": "Quick Actions",
+      "create_task": "Create New Task",
+      "generate_report": "Generate Report",
+      "ai_analysis": "AI Analysis",
+      "schedule_meeting": "Schedule Meeting",
+      "send_notification": "Send Notification",
+      "export_data": "Export Data"
+    },
+    "recent_activities": {
+      "title": "Recent Activities",
+      "no_activities": "No recent activities",
+      "view_all": "View All"
+    },
+    "ai_insights": {
+      "title": "AI Insights",
+      "productivity_trend": "Productivity Trend",
+      "performance_analysis": "Performance Analysis",
+      "recommendations": "Recommendations",
+      "predictions": "Predictions"
+    },
+    "system_status": "System Status",
+    "status": {
+      "api": "API",
+      "database": "Database",
+      "ai_services": "AI Services",
+      "maintenance": "Maintenance"
+    },
+    "features": {
+      "title": "Key Features",
+      "description": "Discover the power of intelligent management system",
+      "ai_integration": "AI Integration",
+      "departments": "Departments",
+      "analytics": "Analytics",
+      "multilingual": "Multilingual"
+    }
+  },
+  "departments": {
+    "title": "Departments",
+    "finance": {
+      "name": "Finance Department",
+      "description": "Manage financial matters and budgets",
+      "features": {
+        "revenue_analysis": "Revenue Analysis",
+        "budget_planning": "Budget Planning",
+        "expense_tracking": "Expense Tracking",
+        "financial_reports": "Financial Reports"
+      }
+    },
+    "operations": {
+      "name": "Operations Department",
+      "description": "Optimize operational processes",
+      "features": {
+        "process_optimization": "Process Optimization",
+        "efficiency_monitoring": "Efficiency Monitoring",
+        "bottleneck_detection": "Bottleneck Detection",
+        "workflow_management": "Workflow Management"
+      }
+    },
+    "sales": {
+      "name": "Sales Department",
+      "description": "Manage sales and customer relationships",
+      "features": {
+        "crm": "Customer Relationship Management",
+        "sales_forecasting": "Sales Forecasting",
+        "lead_management": "Lead Management",
+        "performance_tracking": "Performance Tracking"
+      }
+    },
+    "hr": {
+      "name": "Human Resources",
+      "description": "Manage employees and human resources",
+      "features": {
+        "employee_management": "Employee Management",
+        "attendance_tracking": "Attendance Tracking",
+        "performance_evaluation": "Performance Evaluation",
+        "training_programs": "Training Programs"
+      }
+    },
+    "projects": {
+      "name": "Project Management",
+      "description": "Plan and execute projects",
+      "features": {
+        "project_planning": "Project Planning",
+        "task_management": "Task Management",
+        "resource_allocation": "Resource Allocation",
+        "progress_tracking": "Progress Tracking"
+      }
+    },
+    "it": {
+      "name": "Information Technology",
+      "description": "Manage technical infrastructure",
+      "features": {
+        "infrastructure_management": "Infrastructure Management",
+        "security_monitoring": "Security Monitoring",
+        "system_maintenance": "System Maintenance",
+        "technical_support": "Technical Support"
+      }
+    },
+    "support": {
+      "name": "Technical Support",
+      "description": "Provide technical support to users",
+      "features": {
+        "ticket_management": "Ticket Management",
+        "knowledge_base": "Knowledge Base",
+        "customer_satisfaction": "Customer Satisfaction",
+        "response_time": "Response Time"
+      }
+    },
+    "innovation": {
+      "name": "Innovation Management",
+      "description": "Develop creative ideas",
+      "features": {
+        "idea_collection": "Idea Collection",
+        "feasibility_analysis": "Feasibility Analysis",
+        "innovation_tracking": "Innovation Tracking",
+        "impact_assessment": "Impact Assessment"
+      }
+    },
+    "resources": {
+      "name": "Resource Management",
+      "description": "Manage assets and resources",
+      "features": {
+        "asset_management": "Asset Management",
+        "inventory_tracking": "Inventory Tracking",
+        "cost_analysis": "Cost Analysis",
+        "lifecycle_management": "Lifecycle Management"
+      }
+    },
+    "quality": {
+      "name": "Quality Management",
+      "description": "Ensure quality of products and services",
+      "features": {
+        "quality_control": "Quality Control",
+        "audit_management": "Audit Management",
+        "compliance_tracking": "Compliance Tracking",
+        "improvement_initiatives": "Improvement Initiatives"
+      }
+    }
+  },
+  "tasks": {
+    "title": "Task Management",
+    "create_task": "Create New Task",
+    "task_details": "Task Details",
+    "assign_task": "Assign Task",
+    "due_date": "Due Date",
+    "priority": "Priority",
+    "status": "Status",
+    "assignee": "Assignee",
+    "description": "Description",
+    "attachments": "Attachments",
+    "comments": "Comments",
+    "subtasks": "Subtasks",
+    "dependencies": "Dependencies",
+    "workflow": "Workflow",
+    "progress": "Progress",
+    "time_tracking": "Time Tracking",
+    "estimated_hours": "Estimated Hours",
+    "actual_hours": "Actual Hours"
+  },
+  "reports": {
+    "title": "Reports & Analytics",
+    "generate_report": "Generate Report",
+    "report_type": "Report Type",
+    "date_range": "Date Range",
+    "filters": "Filters",
+    "export_format": "Export Format",
+    "schedule_report": "Schedule Report",
+    "financial_reports": "Financial Reports",
+    "performance_reports": "Performance Reports",
+    "analytics_reports": "Analytics Reports",
+    "custom_reports": "Custom Reports"
+  },
+  "ai": {
+    "title": "Artificial Intelligence",
+    "providers": "Providers",
+    "capabilities": "Capabilities",
+    "usage": "Usage",
+    "settings": "AI Settings",
+    "text_generation": "Text Generation",
+    "text_analysis": "Text Analysis",
+    "sentiment_analysis": "Sentiment Analysis",
+    "translation": "Translation",
+    "summarization": "Summarization",
+    "code_generation": "Code Generation",
+    "document_analysis": "Document Analysis",
+    "image_analysis": "Image Analysis"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "mark_as_read": "Mark as Read",
+    "mark_all_read": "Mark All as Read",
+    "clear_all": "Clear All",
+    "no_notifications": "No notifications",
+    "types": {
+      "info": "Info",
+      "success": "Success",
+      "warning": "Warning",
+      "error": "Error",
+      "task": "Task",
+      "system": "System",
+      "reminder": "Reminder"
+    }
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "register": "Register",
+    "forgot_password": "Forgot Password",
+    "reset_password": "Reset Password",
+    "email": "Email",
+    "password": "Password",
+    "confirm_password": "Confirm Password",
+    "remember_me": "Remember Me",
+    "two_factor": "Two Factor",
+    "verification_code": "Verification Code",
+    "welcome_back": "Welcome Back",
+    "create_account": "Create New Account"
+  },
+  "settings": {
+    "title": "Settings",
+    "general": "General",
+    "security": "Security",
+    "notifications": "Notifications",
+    "integrations": "Integrations",
+    "ai_settings": "AI Settings",
+    "language": "Language",
+    "theme": "Theme",
+    "timezone": "Timezone",
+    "date_format": "Date Format",
+    "currency": "Currency"
+  },
+  "errors": {
+    "404": "Page Not Found",
+    "500": "Server Error",
+    "network_error": "Network Error",
+    "unauthorized": "Unauthorized",
+    "forbidden": "Forbidden",
+    "validation_error": "Validation Error",
+    "something_went_wrong": "Something went wrong"
+  },
+  "success": {
+    "saved": "Saved successfully",
+    "deleted": "Deleted successfully",
+    "updated": "Updated successfully",
+    "created": "Created successfully",
+    "sent": "Sent successfully",
+    "uploaded": "Uploaded successfully",
+    "downloaded": "Downloaded successfully"
+  }
+}
+

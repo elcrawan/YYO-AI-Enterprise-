@@ -1,0 +1,327 @@
+{
+  "common": {
+    "loading": "جاري التحميل...",
+    "error": "حدث خطأ",
+    "success": "تم بنجاح",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "add": "إضافة",
+    "search": "بحث",
+    "filter": "تصفية",
+    "export": "تصدير",
+    "import": "استيراد",
+    "refresh": "تحديث",
+    "back": "رجوع",
+    "next": "التالي",
+    "previous": "السابق",
+    "submit": "إرسال",
+    "confirm": "تأكيد",
+    "yes": "نعم",
+    "no": "لا",
+    "ok": "موافق",
+    "close": "إغلاق",
+    "view": "عرض",
+    "download": "تحميل",
+    "upload": "رفع",
+    "copy": "نسخ",
+    "paste": "لصق",
+    "cut": "قص",
+    "select_all": "تحديد الكل",
+    "clear": "مسح",
+    "reset": "إعادة تعيين",
+    "settings": "الإعدادات",
+    "profile": "الملف الشخصي",
+    "logout": "تسجيل الخروج",
+    "login": "تسجيل الدخول",
+    "register": "التسجيل",
+    "ai_powered": "مدعوم بالذكاء الاصطناعي",
+    "beta": "تجريبي",
+    "new": "جديد",
+    "updated": "محدث",
+    "draft": "مسودة",
+    "published": "منشور",
+    "archived": "مؤرشف"
+  },
+  "navigation": {
+    "dashboard": "لوحة التحكم",
+    "departments": "الإدارات",
+    "tasks": "المهام",
+    "reports": "التقارير",
+    "analytics": "التحليلات",
+    "settings": "الإعدادات",
+    "help": "المساعدة",
+    "notifications": "الإشعارات",
+    "profile": "الملف الشخصي"
+  },
+  "dashboard": {
+    "title": "لوحة التحكم الرئيسية",
+    "welcome_message": "مرحباً بك في نظام YYO Agent AI الإداري الذكي",
+    "greeting": {
+      "morning": "صباح الخير",
+      "afternoon": "مساء الخير",
+      "evening": "مساء الخير"
+    },
+    "stats": {
+      "total_tasks": "إجمالي المهام",
+      "completed_tasks": "المهام المكتملة",
+      "pending_tasks": "المهام المعلقة",
+      "overdue_tasks": "المهام المتأخرة",
+      "active_projects": "المشاريع النشطة",
+      "total_employees": "إجمالي الموظفين",
+      "departments": "الإدارات",
+      "ai_requests": "طلبات الذكاء الاصطناعي"
+    },
+    "quick_actions": {
+      "title": "الإجراءات السريعة",
+      "create_task": "إنشاء مهمة جديدة",
+      "generate_report": "إنشاء تقرير",
+      "ai_analysis": "تحليل ذكي",
+      "schedule_meeting": "جدولة اجتماع",
+      "send_notification": "إرسال إشعار",
+      "export_data": "تصدير البيانات"
+    },
+    "recent_activities": {
+      "title": "الأنشطة الأخيرة",
+      "no_activities": "لا توجد أنشطة حديثة",
+      "view_all": "عرض الكل"
+    },
+    "ai_insights": {
+      "title": "رؤى الذكاء الاصطناعي",
+      "productivity_trend": "اتجاه الإنتاجية",
+      "performance_analysis": "تحليل الأداء",
+      "recommendations": "التوصيات",
+      "predictions": "التنبؤات"
+    },
+    "system_status": "حالة النظام",
+    "status": {
+      "api": "واجهة برمجة التطبيقات",
+      "database": "قاعدة البيانات",
+      "ai_services": "خدمات الذكاء الاصطناعي",
+      "maintenance": "الصيانة"
+    },
+    "features": {
+      "title": "المميزات الرئيسية",
+      "description": "اكتشف قوة النظام الإداري الذكي",
+      "ai_integration": "تكامل الذكاء الاصطناعي",
+      "departments": "الإدارات",
+      "analytics": "التحليلات",
+      "multilingual": "متعدد اللغات"
+    }
+  },
+  "departments": {
+    "title": "الإدارات",
+    "finance": {
+      "name": "الإدارة المالية",
+      "description": "إدارة الأمور المالية والميزانيات",
+      "features": {
+        "revenue_analysis": "تحليل الإيرادات",
+        "budget_planning": "تخطيط الميزانية",
+        "expense_tracking": "تتبع المصروفات",
+        "financial_reports": "التقارير المالية"
+      }
+    },
+    "operations": {
+      "name": "إدارة العمليات",
+      "description": "تحسين العمليات التشغيلية",
+      "features": {
+        "process_optimization": "تحسين العمليات",
+        "efficiency_monitoring": "مراقبة الكفاءة",
+        "bottleneck_detection": "اكتشاف الاختناقات",
+        "workflow_management": "إدارة سير العمل"
+      }
+    },
+    "sales": {
+      "name": "إدارة المبيعات",
+      "description": "إدارة المبيعات وعلاقات العملاء",
+      "features": {
+        "crm": "إدارة علاقات العملاء",
+        "sales_forecasting": "توقعات المبيعات",
+        "lead_management": "إدارة العملاء المحتملين",
+        "performance_tracking": "تتبع الأداء"
+      }
+    },
+    "hr": {
+      "name": "الموارد البشرية",
+      "description": "إدارة الموظفين والموارد البشرية",
+      "features": {
+        "employee_management": "إدارة الموظفين",
+        "attendance_tracking": "تتبع الحضور",
+        "performance_evaluation": "تقييم الأداء",
+        "training_programs": "برامج التدريب"
+      }
+    },
+    "projects": {
+      "name": "إدارة المشاريع",
+      "description": "تخطيط وتنفيذ المشاريع",
+      "features": {
+        "project_planning": "تخطيط المشاريع",
+        "task_management": "إدارة المهام",
+        "resource_allocation": "تخصيص الموارد",
+        "progress_tracking": "تتبع التقدم"
+      }
+    },
+    "it": {
+      "name": "تكنولوجيا المعلومات",
+      "description": "إدارة البنية التحتية التقنية",
+      "features": {
+        "infrastructure_management": "إدارة البنية التحتية",
+        "security_monitoring": "مراقبة الأمان",
+        "system_maintenance": "صيانة الأنظمة",
+        "technical_support": "الدعم التقني"
+      }
+    },
+    "support": {
+      "name": "الدعم الفني",
+      "description": "تقديم الدعم الفني للمستخدمين",
+      "features": {
+        "ticket_management": "إدارة التذاكر",
+        "knowledge_base": "قاعدة المعرفة",
+        "customer_satisfaction": "رضا العملاء",
+        "response_time": "وقت الاستجابة"
+      }
+    },
+    "innovation": {
+      "name": "إدارة الابتكار",
+      "description": "تطوير الأفكار الإبداعية",
+      "features": {
+        "idea_collection": "جمع الأفكار",
+        "feasibility_analysis": "تحليل الجدوى",
+        "innovation_tracking": "تتبع الابتكار",
+        "impact_assessment": "تقييم التأثير"
+      }
+    },
+    "resources": {
+      "name": "إدارة الموارد",
+      "description": "إدارة الأصول والموارد",
+      "features": {
+        "asset_management": "إدارة الأصول",
+        "inventory_tracking": "تتبع المخزون",
+        "cost_analysis": "تحليل التكلفة",
+        "lifecycle_management": "إدارة دورة الحياة"
+      }
+    },
+    "quality": {
+      "name": "إدارة الجودة",
+      "description": "ضمان جودة المنتجات والخدمات",
+      "features": {
+        "quality_control": "مراقبة الجودة",
+        "audit_management": "إدارة التدقيق",
+        "compliance_tracking": "تتبع الامتثال",
+        "improvement_initiatives": "مبادرات التحسين"
+      }
+    }
+  },
+  "tasks": {
+    "title": "إدارة المهام",
+    "create_task": "إنشاء مهمة جديدة",
+    "task_details": "تفاصيل المهمة",
+    "assign_task": "تعيين المهمة",
+    "due_date": "تاريخ الاستحقاق",
+    "priority": "الأولوية",
+    "status": "الحالة",
+    "assignee": "المكلف",
+    "description": "الوصف",
+    "attachments": "المرفقات",
+    "comments": "التعليقات",
+    "subtasks": "المهام الفرعية",
+    "dependencies": "التبعيات",
+    "workflow": "سير العمل",
+    "progress": "التقدم",
+    "time_tracking": "تتبع الوقت",
+    "estimated_hours": "الساعات المقدرة",
+    "actual_hours": "الساعات الفعلية"
+  },
+  "reports": {
+    "title": "التقارير والتحليلات",
+    "generate_report": "إنشاء تقرير",
+    "report_type": "نوع التقرير",
+    "date_range": "النطاق الزمني",
+    "filters": "المرشحات",
+    "export_format": "تنسيق التصدير",
+    "schedule_report": "جدولة التقرير",
+    "financial_reports": "التقارير المالية",
+    "performance_reports": "تقارير الأداء",
+    "analytics_reports": "التقارير التحليلية",
+    "custom_reports": "التقارير المخصصة"
+  },
+  "ai": {
+    "title": "الذكاء الاصطناعي",
+    "providers": "مقدمو الخدمة",
+    "capabilities": "القدرات",
+    "usage": "الاستخدام",
+    "settings": "إعدادات الذكاء الاصطناعي",
+    "text_generation": "توليد النصوص",
+    "text_analysis": "تحليل النصوص",
+    "sentiment_analysis": "تحليل المشاعر",
+    "translation": "الترجمة",
+    "summarization": "التلخيص",
+    "code_generation": "توليد الكود",
+    "document_analysis": "تحليل المستندات",
+    "image_analysis": "تحليل الصور"
+  },
+  "notifications": {
+    "title": "الإشعارات",
+    "mark_as_read": "تحديد كمقروء",
+    "mark_all_read": "تحديد الكل كمقروء",
+    "clear_all": "مسح الكل",
+    "no_notifications": "لا توجد إشعارات",
+    "types": {
+      "info": "معلومات",
+      "success": "نجح",
+      "warning": "تحذير",
+      "error": "خطأ",
+      "task": "مهمة",
+      "system": "نظام",
+      "reminder": "تذكير"
+    }
+  },
+  "auth": {
+    "login": "تسجيل الدخول",
+    "logout": "تسجيل الخروج",
+    "register": "إنشاء حساب",
+    "forgot_password": "نسيت كلمة المرور",
+    "reset_password": "إعادة تعيين كلمة المرور",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "confirm_password": "تأكيد كلمة المرور",
+    "remember_me": "تذكرني",
+    "two_factor": "التحقق الثنائي",
+    "verification_code": "رمز التحقق",
+    "welcome_back": "مرحباً بعودتك",
+    "create_account": "إنشاء حساب جديد"
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "general": "عام",
+    "security": "الأمان",
+    "notifications": "الإشعارات",
+    "integrations": "التكاملات",
+    "ai_settings": "إعدادات الذكاء الاصطناعي",
+    "language": "اللغة",
+    "theme": "المظهر",
+    "timezone": "المنطقة الزمنية",
+    "date_format": "تنسيق التاريخ",
+    "currency": "العملة"
+  },
+  "errors": {
+    "404": "الصفحة غير موجودة",
+    "500": "خطأ في الخادم",
+    "network_error": "خطأ في الشبكة",
+    "unauthorized": "غير مصرح",
+    "forbidden": "ممنوع",
+    "validation_error": "خطأ في التحقق",
+    "something_went_wrong": "حدث خطأ ما"
+  },
+  "success": {
+    "saved": "تم الحفظ بنجاح",
+    "deleted": "تم الحذف بنجاح",
+    "updated": "تم التحديث بنجاح",
+    "created": "تم الإنشاء بنجاح",
+    "sent": "تم الإرسال بنجاح",
+    "uploaded": "تم الرفع بنجاح",
+    "downloaded": "تم التحميل بنجاح"
+  }
+}
+
