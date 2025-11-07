@@ -2,265 +2,470 @@
 
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { useTranslation } from 'react-i18next'
 import { useSession } from 'next-auth/react'
-import { useRouter } from 'next/navigation'
+import { useLanguage } from '@/components/providers/language-provider'
+import { useSocket } from '@/components/providers/socket-provider'
 
-// Components
+// UI Components
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Separator } from '@/components/ui/separator'
-import { LoadingSpinner } from '@/components/ui/loading-spinner'
-import { DashboardStats } from '@/components/dashboard/dashboard-stats'
-import { QuickActions } from '@/components/dashboard/quick-actions'
-import { RecentActivities } from '@/components/dashboard/recent-activities'
-import { AIInsights } from '@/components/dashboard/ai-insights'
-import { DepartmentOverview } from '@/components/dashboard/department-overview'
+import { Badge, StatusBadge, DepartmentBadge } from '@/components/ui/badge'
+import { LoadingSpinner, Skeleton } from '@/components/ui/loading-spinner'
+import { LanguageSwitcher } from '@/components/providers/language-provider'
 
 // Icons
 import { 
-  Brain, 
   BarChart3, 
   Users, 
-  Settings, 
-  Bell,
-  Search,
-  Plus,
+  CheckCircle, 
+  Clock, 
+  AlertTriangle,
   TrendingUp,
-  Shield,
+  Brain,
   Zap,
   Globe,
-  Sparkles
+  Shield,
+  Sparkles,
+  ArrowRight,
+  Play,
+  Settings,
+  Bell,
+  User
 } from 'lucide-react'
 
-// Hooks
-import { useAuth } from '@/hooks/use-auth'
-import { useDashboard } from '@/hooks/use-dashboard'
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
-}
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 }
-}
-
 export default function HomePage() {
-  const { t } = useTranslation()
   const { data: session, status } = useSession()
-  const router = useRouter()
-  const { user, isLoading: authLoading } = useAuth()
-  const { stats, activities, insights, isLoading: dashboardLoading } = useDashboard()
-  
+  const { t, language, isLoading: langLoading } = useLanguage()
+  const { isConnected } = useSocket()
+  const [mounted, setMounted] = useState(false)
   const [currentTime, setCurrentTime] = useState(new Date())
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentTime(new Date())
-    }, 1000)
-
+    setMounted(true)
+    const timer = setInterval(() => setCurrentTime(new Date()), 1000)
     return () => clearInterval(timer)
   }, [])
 
-  useEffect(() => {
-    if (status === 'unauthenticated') {
-      router.push('/auth/login')
-    }
-  }, [status, router])
-
-  if (status === 'loading' || authLoading) {
-    return (
-      <div className="flex h-screen items-center justify-center">
-        <LoadingSpinner size="lg" />
-      </div>
-    )
+  // Mock data for demonstration
+  const stats = {
+    totalTasks: 156,
+    completedTasks: 89,
+    pendingTasks: 45,
+    overdueTasks: 22,
+    activeProjects: 12,
+    totalEmployees: 48,
+    departments: 10,
+    aiRequests: 1247
   }
 
-  if (!session || !user) {
-    return null
+  const recentActivities = [
+    {
+      id: 1,
+      type: 'task_completed',
+      title: 'تم إكمال تحليل الميزانية الشهرية',
+      department: 'finance',
+      time: '5 دقائق مضت',
+      user: 'أحمد محمد'
+    },
+    {
+      id: 2,
+      type: 'task_assigned',
+      title: 'تم تعيين مهمة مراجعة العقود',
+      department: 'operations',
+      time: '15 دقيقة مضت',
+      user: 'فاطمة علي'
+    },
+    {
+      id: 3,
+      type: 'ai_analysis',
+      title: 'تم إكمال تحليل أداء المبيعات',
+      department: 'sales',
+      time: '30 دقيقة مضت',
+      user: 'نظام الذكاء الاصطناعي'
+    }
+  ]
+
+  const aiInsights = [
+    {
+      title: 'اتجاه الإنتاجية',
+      value: '+15%',
+      description: 'زيادة في الإنتاجية هذا الشهر',
+      trend: 'up'
+    },
+    {
+      title: 'رضا العملاء',
+      value: '94%',
+      description: 'معدل رضا العملاء الحالي',
+      trend: 'up'
+    },
+    {
+      title: 'كفاءة العمليات',
+      value: '87%',
+      description: 'معدل كفاءة العمليات',
+      trend: 'stable'
+    }
+  ]
+
+  const systemStatus = {
+    api: 'healthy',
+    database: 'healthy',
+    ai_services: 'healthy',
+    maintenance: 'scheduled'
   }
 
   const getGreeting = () => {
     const hour = currentTime.getHours()
     if (hour < 12) return t('dashboard.greeting.morning')
-    if (hour < 17) return t('dashboard.greeting.afternoon')
+    if (hour < 18) return t('dashboard.greeting.afternoon')
     return t('dashboard.greeting.evening')
+  }
+
+  if (!mounted || langLoading) {
+    return (
+      <div className="flex min-h-screen items-center justify-center">
+        <LoadingSpinner size="xl" text="جاري التحميل..." />
+      </div>
+    )
   }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
       {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-                <Brain className="h-5 w-5 text-primary-foreground" />
+      <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-primary text-white">
+                  <Brain className="h-6 w-6" />
+                </div>
+                <div>
+                  <h1 className="text-xl font-bold">YYO Agent AI</h1>
+                  <p className="text-sm text-muted-foreground">النظام الإداري الذكي</p>
+                </div>
               </div>
-              <h1 className="text-xl font-bold">YYO Agent AI</h1>
             </div>
-            <Separator orientation="vertical" className="h-6" />
-            <Badge variant="secondary" className="gap-1">
-              <Sparkles className="h-3 w-3" />
-              {t('common.ai_powered')}
-            </Badge>
-          </div>
 
-          <div className="flex items-center gap-4">
-            <Button variant="ghost" size="sm">
-              <Search className="h-4 w-4" />
-            </Button>
-            <Button variant="ghost" size="sm">
-              <Bell className="h-4 w-4" />
-            </Button>
-            <Button variant="ghost" size="sm">
-              <Settings className="h-4 w-4" />
-            </Button>
+            <div className="flex items-center gap-4">
+              <LanguageSwitcher />
+              
+              {/* Connection Status */}
+              <div className="flex items-center gap-2">
+                <div className={`h-2 w-2 rounded-full ${isConnected ? 'bg-green-500' : 'bg-red-500'}`} />
+                <span className="text-sm text-muted-foreground">
+                  {isConnected ? 'متصل' : 'غير متصل'}
+                </span>
+              </div>
+
+              {/* User Menu */}
+              <div className="flex items-center gap-2">
+                <Button variant="ghost" size="sm">
+                  <Bell className="h-4 w-4" />
+                </Button>
+                <Button variant="ghost" size="sm">
+                  <Settings className="h-4 w-4" />
+                </Button>
+                <Button variant="ghost" size="sm">
+                  <User className="h-4 w-4" />
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </header>
 
-      {/* Main Content */}
-      <main className="container py-8">
+      <main className="container mx-auto px-4 py-8">
+        {/* Welcome Section */}
         <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="space-y-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-8"
         >
-          {/* Welcome Section */}
-          <motion.div variants={itemVariants}>
-            <Card className="border-0 bg-gradient-to-r from-primary/10 via-primary/5 to-transparent">
-              <CardHeader>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <CardTitle className="text-2xl">
-                      {getGreeting()}, {user.name}! 👋
-                    </CardTitle>
-                    <CardDescription className="text-lg">
-                      {t('dashboard.welcome_message')}
-                    </CardDescription>
-                  </div>
-                  <div className="text-end text-sm text-muted-foreground">
-                    <div>{currentTime.toLocaleDateString('ar-SA')}</div>
-                    <div className="font-mono">{currentTime.toLocaleTimeString('ar-SA')}</div>
-                  </div>
-                </div>
-              </CardHeader>
-            </Card>
-          </motion.div>
-
-          {/* Dashboard Stats */}
-          <motion.div variants={itemVariants}>
-            <DashboardStats stats={stats} isLoading={dashboardLoading} />
-          </motion.div>
-
-          {/* Quick Actions */}
-          <motion.div variants={itemVariants}>
-            <QuickActions />
-          </motion.div>
-
-          {/* Main Dashboard Grid */}
-          <div className="grid gap-8 lg:grid-cols-3">
-            {/* Left Column - Department Overview */}
-            <motion.div variants={itemVariants} className="lg:col-span-2">
-              <DepartmentOverview />
-            </motion.div>
-
-            {/* Right Column - AI Insights & Activities */}
-            <motion.div variants={itemVariants} className="space-y-6">
-              <AIInsights insights={insights} isLoading={dashboardLoading} />
-              <RecentActivities activities={activities} isLoading={dashboardLoading} />
-            </motion.div>
+          <div className="flex items-center justify-between">
+            <div>
+              <h2 className="text-3xl font-bold">
+                {getGreeting()}
+                {session?.user?.name && `, ${session.user.name}`}
+              </h2>
+              <p className="text-muted-foreground mt-2">
+                {t('dashboard.welcome_message')}
+              </p>
+            </div>
+            <div className="text-left">
+              <p className="text-sm text-muted-foreground">
+                {currentTime.toLocaleDateString('ar-SA', {
+                  weekday: 'long',
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                })}
+              </p>
+              <p className="text-lg font-semibold">
+                {currentTime.toLocaleTimeString('ar-SA', {
+                  hour: '2-digit',
+                  minute: '2-digit'
+                })}
+              </p>
+            </div>
           </div>
+        </motion.div>
 
-          {/* System Status */}
-          <motion.div variants={itemVariants}>
+        {/* Stats Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
+        >
+          <Card className="hover:shadow-lg transition-shadow">
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+              <CardTitle className="text-sm font-medium">
+                {t('dashboard.stats.total_tasks')}
+              </CardTitle>
+              <BarChart3 className="h-4 w-4 text-muted-foreground" />
+            </CardHeader>
+            <CardContent>
+              <div className="text-2xl font-bold">{stats.totalTasks}</div>
+              <p className="text-xs text-muted-foreground">
+                +12% من الشهر الماضي
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="hover:shadow-lg transition-shadow">
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+              <CardTitle className="text-sm font-medium">
+                {t('dashboard.stats.completed_tasks')}
+              </CardTitle>
+              <CheckCircle className="h-4 w-4 text-green-600" />
+            </CardHeader>
+            <CardContent>
+              <div className="text-2xl font-bold text-green-600">{stats.completedTasks}</div>
+              <p className="text-xs text-muted-foreground">
+                {Math.round((stats.completedTasks / stats.totalTasks) * 100)}% معدل الإنجاز
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="hover:shadow-lg transition-shadow">
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+              <CardTitle className="text-sm font-medium">
+                {t('dashboard.stats.pending_tasks')}
+              </CardTitle>
+              <Clock className="h-4 w-4 text-yellow-600" />
+            </CardHeader>
+            <CardContent>
+              <div className="text-2xl font-bold text-yellow-600">{stats.pendingTasks}</div>
+              <p className="text-xs text-muted-foreground">
+                في انتظار المراجعة
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="hover:shadow-lg transition-shadow">
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+              <CardTitle className="text-sm font-medium">
+                {t('dashboard.stats.ai_requests')}
+              </CardTitle>
+              <Brain className="h-4 w-4 text-purple-600" />
+            </CardHeader>
+            <CardContent>
+              <div className="text-2xl font-bold text-purple-600">{stats.aiRequests}</div>
+              <p className="text-xs text-muted-foreground">
+                طلبات الذكاء الاصطناعي
+              </p>
+            </CardContent>
+          </Card>
+        </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Quick Actions */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Shield className="h-5 w-5 text-green-500" />
+                  <Zap className="h-5 w-5" />
+                  {t('dashboard.quick_actions.title')}
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <Button className="w-full justify-start" variant="outline">
+                  <Play className="h-4 w-4 ml-2" />
+                  {t('dashboard.quick_actions.create_task')}
+                </Button>
+                <Button className="w-full justify-start" variant="outline">
+                  <BarChart3 className="h-4 w-4 ml-2" />
+                  {t('dashboard.quick_actions.generate_report')}
+                </Button>
+                <Button className="w-full justify-start" variant="outline">
+                  <Brain className="h-4 w-4 ml-2" />
+                  {t('dashboard.quick_actions.ai_analysis')}
+                </Button>
+                <Button className="w-full justify-start" variant="outline">
+                  <Users className="h-4 w-4 ml-2" />
+                  {t('dashboard.quick_actions.schedule_meeting')}
+                </Button>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          {/* Recent Activities */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center justify-between">
+                  <span className="flex items-center gap-2">
+                    <Clock className="h-5 w-5" />
+                    {t('dashboard.recent_activities.title')}
+                  </span>
+                  <Button variant="ghost" size="sm">
+                    {t('dashboard.recent_activities.view_all')}
+                    <ArrowRight className="h-4 w-4 mr-2" />
+                  </Button>
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                {recentActivities.map((activity) => (
+                  <div key={activity.id} className="flex items-start gap-3 p-3 rounded-lg bg-muted/50">
+                    <div className="flex-1">
+                      <p className="text-sm font-medium">{activity.title}</p>
+                      <div className="flex items-center gap-2 mt-1">
+                        <DepartmentBadge department={activity.department as any} size="sm" />
+                        <span className="text-xs text-muted-foreground">{activity.time}</span>
+                      </div>
+                      <p className="text-xs text-muted-foreground mt-1">{activity.user}</p>
+                    </div>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          {/* AI Insights */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Brain className="h-5 w-5" />
+                  {t('dashboard.ai_insights.title')}
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                {aiInsights.map((insight, index) => (
+                  <div key={index} className="flex items-center justify-between p-3 rounded-lg bg-muted/50">
+                    <div>
+                      <p className="text-sm font-medium">{insight.title}</p>
+                      <p className="text-xs text-muted-foreground">{insight.description}</p>
+                    </div>
+                    <div className="text-left">
+                      <p className={`text-lg font-bold ${
+                        insight.trend === 'up' ? 'text-green-600' : 
+                        insight.trend === 'down' ? 'text-red-600' : 'text-blue-600'
+                      }`}>
+                        {insight.value}
+                      </p>
+                      <TrendingUp className={`h-4 w-4 ${
+                        insight.trend === 'up' ? 'text-green-600' : 
+                        insight.trend === 'down' ? 'text-red-600 rotate-180' : 'text-blue-600'
+                      }`} />
+                    </div>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+
+        {/* System Status & Features */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+          {/* System Status */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+          >
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Shield className="h-5 w-5" />
                   {t('dashboard.system_status')}
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <div className="grid gap-4 md:grid-cols-4">
-                  <div className="flex items-center gap-2">
-                    <div className="h-2 w-2 rounded-full bg-green-500" />
-                    <span className="text-sm">{t('dashboard.status.api')}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="h-2 w-2 rounded-full bg-green-500" />
-                    <span className="text-sm">{t('dashboard.status.database')}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="h-2 w-2 rounded-full bg-green-500" />
-                    <span className="text-sm">{t('dashboard.status.ai_services')}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="h-2 w-2 rounded-full bg-yellow-500" />
-                    <span className="text-sm">{t('dashboard.status.maintenance')}</span>
-                  </div>
+              <CardContent className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm">{t('dashboard.status.api')}</span>
+                  <StatusBadge status="active" size="sm" />
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm">{t('dashboard.status.database')}</span>
+                  <StatusBadge status="active" size="sm" />
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm">{t('dashboard.status.ai_services')}</span>
+                  <StatusBadge status="active" size="sm" />
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm">{t('dashboard.status.maintenance')}</span>
+                  <StatusBadge status="pending" size="sm" />
                 </div>
               </CardContent>
             </Card>
           </motion.div>
 
-          {/* Features Showcase */}
-          <motion.div variants={itemVariants}>
+          {/* Key Features */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+          >
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Zap className="h-5 w-5 text-yellow-500" />
+                  <Sparkles className="h-5 w-5" />
                   {t('dashboard.features.title')}
                 </CardTitle>
                 <CardDescription>
                   {t('dashboard.features.description')}
                 </CardDescription>
               </CardHeader>
-              <CardContent>
-                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-                  <div className="flex items-center gap-3 rounded-lg border p-4">
-                    <Brain className="h-8 w-8 text-primary" />
-                    <div>
-                      <h4 className="font-semibold">{t('dashboard.features.ai_integration')}</h4>
-                      <p className="text-sm text-muted-foreground">8 AI Systems</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3 rounded-lg border p-4">
-                    <Users className="h-8 w-8 text-blue-500" />
-                    <div>
-                      <h4 className="font-semibold">{t('dashboard.features.departments')}</h4>
-                      <p className="text-sm text-muted-foreground">10 Departments</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3 rounded-lg border p-4">
-                    <BarChart3 className="h-8 w-8 text-green-500" />
-                    <div>
-                      <h4 className="font-semibold">{t('dashboard.features.analytics')}</h4>
-                      <p className="text-sm text-muted-foreground">Real-time</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3 rounded-lg border p-4">
-                    <Globe className="h-8 w-8 text-purple-500" />
-                    <div>
-                      <h4 className="font-semibold">{t('dashboard.features.multilingual')}</h4>
-                      <p className="text-sm text-muted-foreground">AR/EN</p>
-                    </div>
-                  </div>
+              <CardContent className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <Brain className="h-5 w-5 text-purple-600" />
+                  <span className="text-sm">{t('dashboard.features.ai_integration')}</span>
+                  <Badge variant="success" size="sm">8 أنظمة</Badge>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Users className="h-5 w-5 text-blue-600" />
+                  <span className="text-sm">{t('dashboard.features.departments')}</span>
+                  <Badge variant="info" size="sm">10 إدارات</Badge>
+                </div>
+                <div className="flex items-center gap-3">
+                  <BarChart3 className="h-5 w-5 text-green-600" />
+                  <span className="text-sm">{t('dashboard.features.analytics')}</span>
+                  <Badge variant="success" size="sm">متقدم</Badge>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Globe className="h-5 w-5 text-orange-600" />
+                  <span className="text-sm">{t('dashboard.features.multilingual')}</span>
+                  <Badge variant="warning" size="sm">عربي/إنجليزي</Badge>
                 </div>
               </CardContent>
             </Card>
           </motion.div>
-        </motion.div>
+        </div>
       </main>
     </div>
   )

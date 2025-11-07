@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
-import { Inter, Cairo } from 'next/font/google'
+import { Inter, Cairo, Tajawal } from 'next/font/google'
 import './globals.css'
+
+// Providers
 import { ThemeProvider } from '@/components/providers/theme-provider'
 import { AuthProvider } from '@/components/providers/auth-provider'
 import { QueryProvider } from '@/components/providers/query-provider'
@@ -8,43 +10,51 @@ import { LanguageProvider } from '@/components/providers/language-provider'
 import { ToastProvider } from '@/components/providers/toast-provider'
 import { SocketProvider } from '@/components/providers/socket-provider'
 
-const inter = Inter({
+// Fonts
+const inter = Inter({ 
   subsets: ['latin'],
   variable: '--font-inter',
   display: 'swap',
 })
 
-const cairo = Cairo({
-  subsets: ['arabic', 'latin'],
+const cairo = Cairo({ 
+  subsets: ['arabic'],
   variable: '--font-cairo',
+  display: 'swap',
+})
+
+const tajawal = Tajawal({ 
+  subsets: ['arabic'],
+  weight: ['200', '300', '400', '500', '700', '800', '900'],
+  variable: '--font-tajawal',
   display: 'swap',
 })
 
 export const metadata: Metadata = {
   title: {
-    default: 'YYO Agent AI - نظام إداري مؤسسي ذكي',
+    default: 'YYO Agent AI - النظام الإداري المؤسسي الذكي',
     template: '%s | YYO Agent AI'
   },
-  description: 'نظام إداري مؤسسي ذكي شامل يعمل كمساعد متكامل لجميع إدارات المؤسسة',
+  description: 'نظام إداري مؤسسي ذكي شامل مع تكامل 8 أنظمة ذكاء اصطناعي لإدارة جميع أقسام المؤسسة بكفاءة عالية',
   keywords: [
     'YYO Agent AI',
     'نظام إداري',
     'ذكاء اصطناعي',
     'إدارة مؤسسية',
-    'تحليل البيانات',
     'Enterprise Management',
-    'AI Assistant',
-    'Business Intelligence'
+    'AI System',
+    'Business Intelligence',
+    'Workflow Management'
   ],
-  authors: [{ name: 'YYO AI Team' }],
-  creator: 'YYO AI',
-  publisher: 'YYO AI',
+  authors: [{ name: 'YYO Agent AI Team' }],
+  creator: 'YYO Agent AI',
+  publisher: 'YYO Agent AI',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL(process.env.NEXTAUTH_URL || 'http://localhost:3000'),
+  metadataBase: new URL('https://yyo-ai.com'),
   alternates: {
     canonical: '/',
     languages: {
@@ -56,10 +66,10 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'ar_SA',
     alternateLocale: ['en_US'],
-    url: '/',
-    title: 'YYO Agent AI - نظام إداري مؤسسي ذكي',
-    description: 'نظام إداري مؤسسي ذكي شامل يعمل كمساعد متكامل لجميع إدارات المؤسسة',
+    url: 'https://yyo-ai.com',
     siteName: 'YYO Agent AI',
+    title: 'YYO Agent AI - النظام الإداري المؤسسي الذكي',
+    description: 'نظام إداري مؤسسي ذكي شامل مع تكامل 8 أنظمة ذكاء اصطناعي',
     images: [
       {
         url: '/og-image.png',
@@ -71,9 +81,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'YYO Agent AI - نظام إداري مؤسسي ذكي',
-    description: 'نظام إداري مؤسسي ذكي شامل يعمل كمساعد متكامل لجميع إدارات المؤسسة',
-    images: ['/og-image.png'],
+    title: 'YYO Agent AI - النظام الإداري المؤسسي الذكي',
+    description: 'نظام إداري مؤسسي ذكي شامل مع تكامل 8 أنظمة ذكاء اصطناعي',
+    images: ['/twitter-image.png'],
+    creator: '@yyo_agent_ai',
   },
   robots: {
     index: true,
@@ -88,8 +99,35 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'your-google-verification-code',
+    yandex: 'your-yandex-verification-code',
   },
   category: 'technology',
+  classification: 'Business Software',
+  referrer: 'origin-when-cross-origin',
+  colorScheme: 'light dark',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#0a0a0a' },
+  ],
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true,
+  },
+  manifest: '/manifest.json',
+  icons: {
+    icon: [
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      { rel: 'mask-icon', url: '/safari-pinned-tab.svg', color: '#5bbad5' },
+    ],
+  },
 }
 
 export default function RootLayout({
@@ -100,18 +138,15 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#2563eb" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="YYO Agent AI" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="msapplication-TileColor" content="#2563eb" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <meta name="msapplication-TileColor" content="#2b5797" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
       </head>
-      <body className={`${inter.variable} ${cairo.variable} font-arabic antialiased`}>
+      <body 
+        className={`${inter.variable} ${cairo.variable} ${tajawal.variable} font-cairo antialiased rtl`}
+        suppressHydrationWarning
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -122,7 +157,7 @@ export default function RootLayout({
             <QueryProvider>
               <LanguageProvider>
                 <SocketProvider>
-                  <div className="relative flex min-h-screen flex-col">
+                  <div className="relative flex min-h-screen flex-col bg-background">
                     <div className="flex-1">
                       {children}
                     </div>
