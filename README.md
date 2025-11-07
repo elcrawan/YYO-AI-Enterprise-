@@ -1,16 +1,13 @@
-# YYO Agent AI - Enterprise Management System
+# 🚀 YYO Agent AI - النظام الإداري المؤسسي الذكي
 
 <div align="center">
 
-![YYO Agent AI Logo](https://via.placeholder.com/200x100/2196F3/FFFFFF?text=YYO+AI)
+![YYO Agent AI](https://img.shields.io/badge/YYO%20Agent%20AI-v1.0.0-blue?style=for-the-badge)
+![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.2-blue?style=for-the-badge&logo=typescript)
+![AI Powered](https://img.shields.io/badge/AI%20Powered-8%20Providers-green?style=for-the-badge)
 
-**نظام إداري مؤسسي ذكي شامل يعمل كمساعد متكامل لجميع إدارات المؤسسة**
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Node.js Version](https://img.shields.io/badge/node-%3E%3D20.0.0-brightgreen)](https://nodejs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.2+-blue)](https://www.typescriptlang.org/)
-[![React](https://img.shields.io/badge/React-18.2+-61DAFB)](https://reactjs.org/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15+-336791)](https://www.postgresql.org/)
+**نظام إداري مؤسسي ذكي شامل مع تكامل 8 أنظمة ذكاء اصطناعي**
 
 [العربية](#العربية) | [English](#english)
 
@@ -20,133 +17,208 @@
 
 ## العربية
 
-### 📌 نظرة عامة
+### 🎯 نظرة عامة
 
 YYO Agent AI هو نظام إداري مؤسسي ذكي شامل يعمل كمساعد متكامل لجميع إدارات المؤسسة. يهدف النظام إلى أن يكون العقل الإداري والتحليلي المركزي الذي يدير العمليات، يتفاعل مع الموظفين، ويحلل البيانات لتوجيه القرارات في الوقت الحقيقي.
 
-### 🎯 الميزات الرئيسية
+### ✨ المميزات الرئيسية
 
-#### 🏢 إدارة شاملة لـ 10 إدارات
-- **المالية** - تحليل الإيرادات والمصروفات والميزانيات التنبؤية
-- **العمليات** - تتبع مراحل التنفيذ وتحليل الكفاءة التشغيلية
-- **المبيعات** - تحليل العملاء والمبيعات التنبؤية
-- **الموارد البشرية** - تتبع الأداء وإدارة الموظفين
-- **المشاريع** - إدارة المشاريع وتحليل التكاليف
-- **تكنولوجيا المعلومات** - إدارة البنية التحتية والأمان
-- **الدعم الفني** - نظام تذاكر ذكي وقاعدة معرفة
-- **الابتكار** - جمع الأفكار وتحليل الجدوى
-- **الموارد** - تتبع الأصول والمخزون
-- **الجودة** - تحليل مؤشرات الجودة ومعايير ISO
+#### 🏢 الإدارات المدعومة (10 إدارات)
+- 💰 **الإدارة المالية** - تحليل الإيرادات والميزانيات والتدفق النقدي
+- ⚙️ **إدارة العمليات** - مراقبة الكفاءة التشغيلية واكتشاف الاختناقات
+- 📈 **إدارة المبيعات** - CRM متكامل وتحليل العملاء والتنبؤات
+- 👥 **الموارد البشرية** - إدارة الموظفين والأداء والتدريب
+- 📊 **إدارة المشاريع** - تتبع المشاريع والمهام وتخصيص الموارد
+- 💻 **تكنولوجيا المعلومات** - إدارة البنية التحتية والأمان
+- 🛠️ **الدعم الفني** - نظام التذاكر الذكي وقاعدة المعرفة
+- 💡 **إدارة الابتكار** - جمع وتقييم الأفكار الإبداعية
+- 📦 **إدارة الموارد** - تتبع الأصول والمخزون
+- ✅ **إدارة الجودة** - مراقبة معايير الجودة والامتثال
 
-#### 🤖 الذكاء الاصطناعي المتقدم
-- **تكامل متعدد المصادر**: OpenAI GPT, Google Gemini, Anthropic Claude, xAI Grok, DeepSeek, Mistral, Kimi, Qwen
-- **تحليل النصوص والمستندات** باللغتين العربية والإنجليزية
-- **التنبؤات المستقبلية** للمبيعات والإيرادات والاتجاهات
-- **تحليل المشاعر** لبيئة العمل ورضا الموظفين
-- **إنشاء التقارير التلقائية** مع التحليلات والتوصيات
+#### 🤖 تكامل الذكاء الاصطناعي (8 أنظمة)
+- **OpenAI GPT** - المحادثة والتحليل النصي
+- **Google Gemini** - التحليل المتعدد الوسائط
+- **Anthropic Claude** - التحليل المعقد والدقيق
+- **xAI Grok** - التحليل السياقي المتقدم
+- **DeepSeek** - التحليل التقني المتخصص
+- **Mistral** - المعالجة السريعة والفعالة
+- **Kimi** - الدعم متعدد الثقافات
+- **Qwen** - التخصص في العربية والآسيوية
 
-#### 📋 نظام المهام الذكي
-- **تسلسل هرمي**: المدير → رئيس القسم → الموظف
-- **توزيع تلقائي** للمهام حسب التخصص والحمولة
-- **تتبع في الوقت الفعلي** لحالة المهام والتقدم
-- **أرشفة شاملة** لجميع المراحل مع الوقت والمرفقات
-
-#### 📊 التحليلات والتقارير
-- **لوحات تحكم تفاعلية** في الوقت الفعلي
-- **تقارير مخصصة** بصيغ متعددة (PDF, Excel, Power BI)
-- **تحليلات تنبؤية** باستخدام الذكاء الاصطناعي
-- **مؤشرات الأداء الرئيسية** (KPIs) لجميع الإدارات
+#### 🎨 واجهة المستخدم المتقدمة
+- 🌙 الوضع الفاتح والداكن مع تبديل تلقائي
+- 🌍 دعم ثنائي اللغة (العربية والإنجليزية) مع RTL
+- 📱 تصميم متجاوب لجميع الأجهزة
+- ✨ تأثيرات بصرية متقدمة مع Framer Motion
+- 🎨 ألوان مخصصة لكل إدارة
 
 ### 🛠️ التقنيات المستخدمة
 
-#### Backend
-- **Node.js 20+** مع TypeScript
-- **Express.js** للـ APIs
-- **PostgreSQL 15+** للبيانات المهيكلة
-- **MongoDB 6+** للتحليلات والمستندات
-- **Redis 7+** للتخزين المؤقت والجلسات
-- **Elasticsearch 8+** للبحث والفهرسة
-
 #### Frontend
-- **React 18+** مع TypeScript
-- **Material-UI (MUI)** للواجهة
-- **Redux Toolkit** لإدارة الحالة
-- **Vite** لبناء التطبيق
-- **Socket.IO** للتحديثات الفورية
+- **Next.js 14** - إطار العمل الأساسي مع App Router
+- **TypeScript** - للأمان والنوع الصارم
+- **Tailwind CSS** - للتصميم المتجاوب
+- **Framer Motion** - للتأثيرات البصرية
+- **React Query** - لإدارة البيانات
+- **Zustand** - لإدارة الحالة
+- **Radix UI** - للمكونات الأساسية
 
-#### DevOps & Infrastructure
-- **Docker & Docker Compose** للحاويات
-- **Kubernetes** للإنتاج
-- **Prometheus & Grafana** للمراقبة
-- **ELK Stack** للسجلات والتحليل
+#### Backend & Database
+- **Prisma ORM** - لإدارة قواعد البيانات
+- **PostgreSQL** - للبيانات المهيكلة
+- **MongoDB** - للبيانات غير المهيكلة
+- **Redis** - للتخزين المؤقت
+- **NextAuth.js** - للمصادقة والأمان
 
-### 🚀 البدء السريع
+#### AI & Real-time
+- **8 AI Providers** - تكامل متعدد مع أنظمة الذكاء الاصطناعي
+- **Socket.io** - للتحديثات الفورية
+- **WebSockets** - للإشعارات المباشرة
+
+### 🚀 التثبيت والتشغيل
 
 #### المتطلبات الأساسية
-- Node.js 20.0.0 أو أحدث
-- Docker & Docker Compose
-- Git
+- Node.js 18.0.0 أو أحدث
+- npm 8.0.0 أو أحدث
+- PostgreSQL 13 أو أحدث
+- Redis 6 أو أحدث
+- MongoDB 5 أو أحدث (اختياري)
 
-#### التثبيت
+#### خطوات التثبيت
 
+1. **استنساخ المشروع**
 ```bash
-# استنساخ المستودع
 git clone https://github.com/elcrawan/YYO-AI-Enterprise-.git
 cd YYO-AI-Enterprise-
-
-# نسخ ملف البيئة
-cp .env.example .env
-
-# تحديث متغيرات البيئة في .env
-# أضف مفاتيح API للذكاء الاصطناعي وإعدادات قواعد البيانات
-
-# تشغيل النظام باستخدام Docker
-docker-compose up -d
-
-# أو التطوير المحلي
-cd backend && npm install && npm run dev
-cd ../frontend && npm install && npm run dev
 ```
 
-#### الوصول للنظام
-- **Frontend**: http://localhost:3001
-- **Backend API**: http://localhost:3000
-- **Kibana**: http://localhost:5601
-- **Grafana**: http://localhost:3002
+2. **تثبيت التبعيات**
+```bash
+npm install
+```
 
-### 📖 الوثائق
+3. **إعداد متغيرات البيئة**
+```bash
+cp .env.example .env.local
+```
 
-- [📋 متطلبات النظام](docs/requirements.md)
-- [🔧 المواصفات التقنية](docs/technical-specifications.md)
-- [🎯 حالات الاستخدام](docs/use-cases.md)
-- [🗄️ تصميم قاعدة البيانات](docs/database-design.md)
-- [🔌 تصميم APIs](docs/api-design.md)
-- [🏗️ مخططات النظام](architecture/system-diagram.md)
+4. **تحديث ملف البيئة**
+```env
+# قواعد البيانات
+DATABASE_URL="postgresql://username:password@localhost:5432/yyo_ai_enterprise"
+MONGODB_URI="mongodb://localhost:27017/yyo_ai_enterprise"
+REDIS_URL="redis://localhost:6379"
+
+# المصادقة
+NEXTAUTH_URL="http://localhost:3000"
+NEXTAUTH_SECRET="your-secret-key-here"
+
+# خدمات الذكاء الاصطناعي
+OPENAI_API_KEY="your-openai-api-key"
+GOOGLE_AI_API_KEY="your-google-ai-api-key"
+ANTHROPIC_API_KEY="your-anthropic-api-key"
+# ... باقي المفاتيح
+```
+
+5. **إعداد قاعدة البيانات**
+```bash
+npx prisma generate
+npx prisma db push
+```
+
+6. **تشغيل النظام**
+```bash
+npm run dev
+```
+
+7. **فتح المتصفح**
+```
+http://localhost:3000
+```
+
+### 📊 الأوامر المتاحة
+
+```bash
+# التطوير
+npm run dev          # تشغيل الخادم المحلي
+npm run build        # بناء المشروع للإنتاج
+npm run start        # تشغيل الإنتاج
+npm run lint         # فحص الكود
+
+# قاعدة البيانات
+npm run db:generate  # توليد Prisma Client
+npm run db:push      # دفع التغييرات لقاعدة البيانات
+npm run db:migrate   # تشغيل الهجرات
+npm run db:studio    # فتح Prisma Studio
+
+# الاختبارات
+npm run test         # تشغيل الاختبارات
+npm run test:watch   # تشغيل الاختبارات مع المراقبة
+npm run test:coverage # تقرير التغطية
+```
+
+### 🔧 الإعداد المتقدم
+
+#### إعداد خدمات الذكاء الاصطناعي
+1. احصل على مفاتيح API من المقدمين المطلوبين
+2. أضف المفاتيح إلى ملف `.env.local`
+3. قم بتفعيل الخدمات المطلوبة في الإعدادات
+
+#### إعداد قواعد البيانات المتعددة
+```bash
+# PostgreSQL (مطلوب)
+createdb yyo_ai_enterprise
+
+# MongoDB (اختياري)
+# تأكد من تشغيل MongoDB على المنفذ الافتراضي
+
+# Redis (مطلوب للتخزين المؤقت)
+# تأكد من تشغيل Redis على المنفذ الافتراضي
+```
+
+### 📁 هيكل المشروع
+
+```
+src/
+├── app/                 # Next.js App Router
+│   ├── page.tsx        # الصفحة الرئيسية
+│   ├── layout.tsx      # التخطيط الأساسي
+│   └── globals.css     # الأنماط العامة
+├── components/          # مكونات React
+│   ├── ui/             # مكونات UI الأساسية
+│   ├── dashboard/      # مكونات لوحة التحكم
+│   ├── departments/    # مكونات الإدارات
+│   └── providers/      # Context Providers
+├── lib/                # المكتبات والأدوات
+│   ├── auth/          # نظام المصادقة
+│   ├── ai/            # تكامل الذكاء الاصطناعي
+│   ├── database/      # إدارة قواعد البيانات
+│   ├── i18n/          # نظام اللغات
+│   └── utils.ts       # الأدوات المساعدة
+├── types/             # تعريفات TypeScript
+├── hooks/             # React Hooks مخصصة
+└── services/          # خدمات خارجية
+```
 
 ### 🔒 الأمان
 
-- **مصادقة ثنائية (2FA)** مع دعم TOTP
-- **تشفير شامل** للبيانات (AES-256)
-- **نظام أدوار وصلاحيات** متقدم (RBAC)
-- **سجل أنشطة شامل** (Audit Trail)
-- **حماية من الهجمات** الشائعة (XSS, CSRF, SQL Injection)
+- **مصادقة ثنائية (2FA)** مع TOTP
+- **تشفير البيانات** AES-256 للتخزين و TLS للنقل
+- **سجل الأنشطة** الشامل لجميع العمليات
+- **إدارة الأدوار والصلاحيات** المتقدمة
+- **مراقبة الوصول** غير المصرح به
 
-### 🌍 الدعم متعدد اللغات
+### 📈 الأداء
 
-- **العربية** (RTL) - اللغة الافتراضية
-- **الإنجليزية** (LTR)
-- تبديل فوري بين اللغات
-- تنسيق التواريخ والأرقام المحلي
-
-### 📱 التوافق
-
-- **المتصفحات**: Chrome 90+, Firefox 88+, Safari 14+, Edge 90+
-- **الأجهزة**: سطح المكتب، الأجهزة اللوحية، الهواتف الذكية
-- **أنظمة التشغيل**: Windows, macOS, Linux, iOS, Android
+- **زمن التحميل:** أقل من 3 ثوانٍ
+- **استجابة API:** أقل من 500ms
+- **معالجة التقارير:** أقل من 10 ثوانٍ
+- **التحديثات الفورية:** أقل من 1 ثانية
+- **دعم:** 10,000 مستخدم متزامن
 
 ### 🤝 المساهمة
 
-نرحب بالمساهمات! يرجى قراءة [دليل المساهمة](CONTRIBUTING.md) قبل البدء.
+نرحب بالمساهمات! يرجى قراءة دليل المساهمة قبل البدء.
 
 ### 📄 الترخيص
 
@@ -154,141 +226,127 @@ cd ../frontend && npm install && npm run dev
 
 ### 📞 الدعم
 
-- **البريد الإلكتروني**: support@yyo-ai.com
-- **الوثائق**: [docs.yyo-ai.com](https://docs.yyo-ai.com)
-- **المجتمع**: [community.yyo-ai.com](https://community.yyo-ai.com)
+- **البريد الإلكتروني:** support@yyo-ai.com
+- **الوثائق:** [docs.yyo-ai.com](https://docs.yyo-ai.com)
+- **المجتمع:** [community.yyo-ai.com](https://community.yyo-ai.com)
 
 ---
 
 ## English
 
-### 📌 Overview
+### 🎯 Overview
 
 YYO Agent AI is a comprehensive intelligent enterprise management system that serves as an integrated assistant for all organizational departments. The system aims to be the central administrative and analytical brain that manages operations, interacts with employees, and analyzes data to guide real-time decision-making.
 
-### 🎯 Key Features
+### ✨ Key Features
 
-#### 🏢 Comprehensive Management for 10 Departments
-- **Finance** - Revenue, expense analysis, and predictive budgeting
-- **Operations** - Execution tracking and operational efficiency analysis
-- **Sales** - Customer analysis and predictive sales
-- **Human Resources** - Performance tracking and employee management
-- **Projects** - Project management and cost analysis
-- **IT** - Infrastructure management and security
-- **Support** - Smart ticketing system and knowledge base
-- **Innovation** - Idea collection and feasibility analysis
-- **Resources** - Asset and inventory tracking
-- **Quality** - Quality metrics analysis and ISO standards
+#### 🏢 Supported Departments (10 Departments)
+- 💰 **Finance Department** - Revenue analysis, budgets, and cash flow
+- ⚙️ **Operations Management** - Operational efficiency monitoring and bottleneck detection
+- 📈 **Sales Management** - Integrated CRM, customer analysis, and forecasting
+- 👥 **Human Resources** - Employee management, performance, and training
+- 📊 **Project Management** - Project tracking, tasks, and resource allocation
+- 💻 **Information Technology** - Infrastructure management and security
+- 🛠️ **Technical Support** - Smart ticketing system and knowledge base
+- 💡 **Innovation Management** - Idea collection and evaluation
+- 📦 **Resource Management** - Asset and inventory tracking
+- ✅ **Quality Management** - Quality standards monitoring and compliance
 
-#### 🤖 Advanced AI Integration
-- **Multi-source Integration**: OpenAI GPT, Google Gemini, Anthropic Claude, xAI Grok, DeepSeek, Mistral, Kimi, Qwen
-- **Text and Document Analysis** in Arabic and English
-- **Future Predictions** for sales, revenue, and trends
-- **Sentiment Analysis** for work environment and employee satisfaction
-- **Automated Report Generation** with analytics and recommendations
+#### 🤖 AI Integration (8 Systems)
+- **OpenAI GPT** - Conversation and text analysis
+- **Google Gemini** - Multi-modal analysis
+- **Anthropic Claude** - Complex and precise analysis
+- **xAI Grok** - Advanced contextual analysis
+- **DeepSeek** - Specialized technical analysis
+- **Mistral** - Fast and efficient processing
+- **Kimi** - Multi-cultural support
+- **Qwen** - Arabic and Asian specialization
 
-#### 📋 Smart Task Management System
-- **Hierarchical Flow**: Manager → Department Head → Employee
-- **Automatic Distribution** based on specialization and workload
-- **Real-time Tracking** of task status and progress
-- **Comprehensive Archiving** of all stages with time and attachments
-
-#### 📊 Analytics and Reporting
-- **Interactive Real-time Dashboards**
-- **Custom Reports** in multiple formats (PDF, Excel, Power BI)
-- **Predictive Analytics** using AI
-- **Key Performance Indicators** (KPIs) for all departments
-
-### 🛠️ Technology Stack
-
-#### Backend
-- **Node.js 20+** with TypeScript
-- **Express.js** for APIs
-- **PostgreSQL 15+** for structured data
-- **MongoDB 6+** for analytics and documents
-- **Redis 7+** for caching and sessions
-- **Elasticsearch 8+** for search and indexing
-
-#### Frontend
-- **React 18+** with TypeScript
-- **Material-UI (MUI)** for interface
-- **Redux Toolkit** for state management
-- **Vite** for building
-- **Socket.IO** for real-time updates
-
-#### DevOps & Infrastructure
-- **Docker & Docker Compose** for containers
-- **Kubernetes** for production
-- **Prometheus & Grafana** for monitoring
-- **ELK Stack** for logging and analysis
-
-### 🚀 Quick Start
+### 🚀 Installation & Setup
 
 #### Prerequisites
-- Node.js 20.0.0 or newer
-- Docker & Docker Compose
-- Git
+- Node.js 18.0.0 or higher
+- npm 8.0.0 or higher
+- PostgreSQL 13 or higher
+- Redis 6 or higher
+- MongoDB 5 or higher (optional)
 
-#### Installation
+#### Installation Steps
 
+1. **Clone the repository**
 ```bash
-# Clone the repository
 git clone https://github.com/elcrawan/YYO-AI-Enterprise-.git
 cd YYO-AI-Enterprise-
-
-# Copy environment file
-cp .env.example .env
-
-# Update environment variables in .env
-# Add AI API keys and database settings
-
-# Run system using Docker
-docker-compose up -d
-
-# Or local development
-cd backend && npm install && npm run dev
-cd ../frontend && npm install && npm run dev
 ```
 
-#### System Access
-- **Frontend**: http://localhost:3001
-- **Backend API**: http://localhost:3000
-- **Kibana**: http://localhost:5601
-- **Grafana**: http://localhost:3002
+2. **Install dependencies**
+```bash
+npm install
+```
 
-### 📖 Documentation
+3. **Setup environment variables**
+```bash
+cp .env.example .env.local
+```
 
-- [📋 System Requirements](docs/requirements.md)
-- [🔧 Technical Specifications](docs/technical-specifications.md)
-- [🎯 Use Cases](docs/use-cases.md)
-- [🗄️ Database Design](docs/database-design.md)
-- [🔌 API Design](docs/api-design.md)
-- [🏗️ System Diagrams](architecture/system-diagram.md)
+4. **Configure environment file**
+```env
+# Databases
+DATABASE_URL="postgresql://username:password@localhost:5432/yyo_ai_enterprise"
+MONGODB_URI="mongodb://localhost:27017/yyo_ai_enterprise"
+REDIS_URL="redis://localhost:6379"
 
-### 🔒 Security
+# Authentication
+NEXTAUTH_URL="http://localhost:3000"
+NEXTAUTH_SECRET="your-secret-key-here"
 
-- **Two-Factor Authentication (2FA)** with TOTP support
-- **Comprehensive Encryption** (AES-256)
-- **Advanced Role-Based Access Control** (RBAC)
-- **Comprehensive Audit Trail**
-- **Protection Against Common Attacks** (XSS, CSRF, SQL Injection)
+# AI Services
+OPENAI_API_KEY="your-openai-api-key"
+GOOGLE_AI_API_KEY="your-google-ai-api-key"
+ANTHROPIC_API_KEY="your-anthropic-api-key"
+# ... other keys
+```
 
-### 🌍 Multi-language Support
+5. **Setup database**
+```bash
+npx prisma generate
+npx prisma db push
+```
 
-- **Arabic** (RTL) - Default language
-- **English** (LTR)
-- Instant language switching
-- Localized date and number formatting
+6. **Run the system**
+```bash
+npm run dev
+```
 
-### 📱 Compatibility
+7. **Open browser**
+```
+http://localhost:3000
+```
 
-- **Browsers**: Chrome 90+, Firefox 88+, Safari 14+, Edge 90+
-- **Devices**: Desktop, tablets, smartphones
-- **Operating Systems**: Windows, macOS, Linux, iOS, Android
+### 📊 Available Commands
+
+```bash
+# Development
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run start        # Start production server
+npm run lint         # Lint code
+
+# Database
+npm run db:generate  # Generate Prisma Client
+npm run db:push      # Push changes to database
+npm run db:migrate   # Run migrations
+npm run db:studio    # Open Prisma Studio
+
+# Testing
+npm run test         # Run tests
+npm run test:watch   # Run tests in watch mode
+npm run test:coverage # Coverage report
+```
 
 ### 🤝 Contributing
 
-We welcome contributions! Please read the [Contributing Guide](CONTRIBUTING.md) before getting started.
+We welcome contributions! Please read our contributing guide before getting started.
 
 ### 📄 License
 
@@ -296,14 +354,18 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### 📞 Support
 
-- **Email**: support@yyo-ai.com
-- **Documentation**: [docs.yyo-ai.com](https://docs.yyo-ai.com)
-- **Community**: [community.yyo-ai.com](https://community.yyo-ai.com)
+- **Email:** support@yyo-ai.com
+- **Documentation:** [docs.yyo-ai.com](https://docs.yyo-ai.com)
+- **Community:** [community.yyo-ai.com](https://community.yyo-ai.com)
 
 ---
 
 <div align="center">
 
-**Made with ❤️ by the YYO AI Team**
+**Made with ❤️ by the YYO Agent AI Team**
+
+[![GitHub stars](https://img.shields.io/github/stars/elcrawan/YYO-AI-Enterprise-?style=social)](https://github.com/elcrawan/YYO-AI-Enterprise-)
+[![GitHub forks](https://img.shields.io/github/forks/elcrawan/YYO-AI-Enterprise-?style=social)](https://github.com/elcrawan/YYO-AI-Enterprise-)
 
 </div>
+
